@@ -17,235 +17,91 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
 proxies:
-  - name: melli 1
-    type: socks5
-    server: 5.61.24.6
-    port: "443"
-  - name: melli 2
+  - name: melli 1 (Netherlands)
+    type: http
+    server: 37.32.10.3
+    port: "1080"
+  - name: melli 2 (Netherlands)
+    type: http
+    server: 94.101.186.167
+    port: "9999"
+  - name: melli 3 (Finland)
+    type: http
+    server: 37.32.26.253
+    port: "8080"
+  - name: melli 4 (Germany)
     type: socks5
     server: 37.32.26.198
     port: "1080"
-  - name: melli 3
+  - name: melli 5 (Netherlands)
+    type: http
+    server: 37.32.28.39
+    port: "80"
+  - name: melli 6 (Netherlands)
+    type: http
+    server: 37.32.13.26
+    port: "8888"
+  - name: melii 7 (IRAN)
+    type: http
+    server: 37.32.14.180
+    port: "8080"
+  - name: melli 8 (IRAN)
+    type: http
+    server: 37.32.11.167
+    port: "3128"
+  - name: melli 9 (IRAN)
+    type: http
+    server: 37.32.26.126
+    port: "3128"
+    _index: 8
+  - name: melli 10 (IRAN)
     type: socks5
-    server: 193.151.135.218
+    server: 37.32.30.220
     port: "1080"
-  - name: United Kingdom (GB)London1
-    server: 212.102.53.78
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - name: United States (US)Los Angeles1
-    server: 198.181.56.163
-    port: 238
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United States (US)Chicago
-    server: 162.251.61.47
-    port: 800
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: G!yBwPWH3Vao
-  - name: Japan (JP)Osaka
-    server: 150.230.57.77
-    port: 48007
-    type: ss
-    cipher: aes-256-gcm
-    password: 123456
-  - name: United States (US)Phoenix
-    server: 37.120.219.218
-    port: 812
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: G!yBwPWH3Vao
-  - name: United States (US)Los Angeles2
-    server: 172.96.192.100
-    port: 246
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United States (US)Los Angeles3
-    server: 144.168.60.70
-    port: 252
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United Kingdom (GB)London2
-    server: 212.102.53.78
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - name: Russia (RU)Moscow
-    server: 185.4.65.6
-    port: 21247
-    type: ss
-    cipher: aes-256-cfb
-    password: vDS9G2p
-  - name: United States (US)Los Angeles4
-    server: 172.96.192.100
-    port: 246
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United States (US)Los Angeles5
-    server: 198.181.56.163
-    port: 238
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United States (US)Los Angeles6
-    server: 172.96.192.58
-    port: 254
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United Kingdom (GB)London3
-    server: 212.102.53.78
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - name: United States (US)Los Angeles7
-    server: 97.64.31.80
-    port: 247
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United States (US)Los Angeles8
-    server: 97.64.26.63
-    port: 253
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United States (US)Los Angeles9
-    server: 144.168.60.70
-    port: 252
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United States (US)Los Angeles10
-    server: 104.243.25.95
-    port: 253
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr03
-  - name: United States (US)Los Angeles11
-    server: 93.179.112.70
-    port: 253
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr06
-  - name: United States (US)Los Angeles12
-    server: 172.96.192.100
-    port: 246
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United States (US)Los Angeles13
-    server: c10s2.jamjams3.net
-    port: 16522
-    type: ss
-    cipher: aes-256-gcm
-    password: QB7rUb6qjPro24E8
-  - name: United States (US)Los Angeles14
-    server: 65.49.204.125
-    port: 254
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr01
-  - name: Australia (AU)Sydney
-    server: 45.77.48.44
-    port: 8099
-    type: ss
-    cipher: aes-256-cfb
-    password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
-  - name: United States (US)Los Angeles15
-    server: c10s1.jamjams3.net
-    port: 16522
-    type: ss
-    cipher: aes-256-gcm
-    password: QB7rUb6qjPro24E8
-  - name: United States (US)Los Angeles16
-    server: 172.96.192.100
-    port: 246
-    type: ss
-    cipher: aes-256-cfb
-    password: bwhskrskr05
-  - name: United Kingdom (GB)London4
-    server: 212.102.53.78
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
+  - name: melli 11 (IRAN)
+    type: http
+    server: 37.32.21.237
+    port: "3128"
+  - name: melli 12 (IRAN)
+    type: http
+    server: 94.101.178.46
+    port: "8080"
 proxy-groups:
   - name: MENU
     type: select
     proxies:
       - AUTOMATIC
       - MANUAL
+      - melli (IRAN)
   - name: MANUAL
     type: select
     proxies:
-      - melli 1
-      - melli 2
-      - melli 3
-      - United Kingdom (GB)London1
-      - United States (US)Los Angeles1
-      - United States (US)Chicago
-      - Japan (JP)Osaka
-      - United States (US)Phoenix
-      - United States (US)Los Angeles2
-      - United States (US)Los Angeles3
-      - United Kingdom (GB)London2
-      - Russia (RU)Moscow
-      - United States (US)Los Angeles4
-      - United States (US)Los Angeles5
-      - United States (US)Los Angeles6
-      - United Kingdom (GB)London3
-      - United States (US)Los Angeles7
-      - United States (US)Los Angeles8
-      - United States (US)Los Angeles9
-      - United States (US)Los Angeles10
-      - United States (US)Los Angeles11
-      - United States (US)Los Angeles12
-      - United States (US)Los Angeles13
-      - United States (US)Los Angeles14
-      - Australia (AU)Sydney
-      - United States (US)Los Angeles15
-      - United States (US)Los Angeles16
-      - United Kingdom (GB)London4
+      - melli 1 (Netherlands)
+      - melli 2 (Netherlands)
+      - melli 3 (Finland)
+      - melli 4 (Germany)
+      - melli 5 (Netherlands)
+      - melli 6 (Netherlands)
   - name: AUTOMATIC
     type: url-test
     url: http://connectivitycheck.gstatic.com/generate_204
     interval: 300
     proxies:
-      - United Kingdom (GB)London1
-      - United States (US)Los Angeles1
-      - United States (US)Chicago
-      - Japan (JP)Osaka
-      - United States (US)Phoenix
-      - United States (US)Los Angeles2
-      - United States (US)Los Angeles3
-      - United Kingdom (GB)London2
-      - Russia (RU)Moscow
-      - United States (US)Los Angeles4
-      - United States (US)Los Angeles5
-      - United States (US)Los Angeles6
-      - United Kingdom (GB)London3
-      - United States (US)Los Angeles7
-      - United States (US)Los Angeles8
-      - United States (US)Los Angeles9
-      - United States (US)Los Angeles10
-      - United States (US)Los Angeles11
-      - United States (US)Los Angeles12
-      - United States (US)Los Angeles13
-      - United States (US)Los Angeles14
-      - Australia (AU)Sydney
-      - United States (US)Los Angeles15
-      - United States (US)Los Angeles16
-      - United Kingdom (GB)London4
+      - melli 1 (Netherlands)
+      - melli 2 (Netherlands)
+      - melli 3 (Finland)
+      - melli 4 (Germany)
+      - melli 5 (Netherlands)
+      - melli 6 (Netherlands)
+  - name: melli (IRAN)
+    proxies:
+      - melii 7 (IRAN)
+      - melli 8 (IRAN)
+      - melli 9 (IRAN)
+      - melli 10 (IRAN)
+      - melli 11 (IRAN)
+      - melli 12 (IRAN)
+    type: select
 rules:
   - DOMAIN-SUFFIX,ir,DIRECT
   - GEOIP,IR,DIRECT
