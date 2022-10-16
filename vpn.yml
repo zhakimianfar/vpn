@@ -17,91 +17,41 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
 proxies:
-  - name: melli 1 (Netherlands)
-    type: http
-    server: 37.32.10.3
-    port: "1080"
-  - name: melli 2 (Netherlands)
-    type: http
-    server: 94.101.186.167
-    port: "9999"
-  - name: melli 3 (Finland)
-    type: http
-    server: 37.32.26.253
-    port: "8080"
-  - name: melli 4 (Germany)
-    type: socks5
-    server: 37.32.26.198
-    port: "1080"
-  - name: melli 5 (Netherlands)
-    type: http
-    server: 37.32.28.39
-    port: "80"
-  - name: melli 6 (Netherlands)
-    type: http
-    server: 37.32.13.26
-    port: "8888"
-  - name: melii 7 (IRAN)
-    type: http
-    server: 37.32.14.180
-    port: "8080"
-  - name: melli 8 (IRAN)
-    type: http
-    server: 37.32.11.167
-    port: "3128"
-  - name: melli 9 (IRAN)
-    type: http
-    server: 37.32.26.126
-    port: "3128"
-    _index: 8
-  - name: melli 10 (IRAN)
-    type: socks5
-    server: 37.32.30.220
-    port: "1080"
-  - name: melli 11 (IRAN)
-    type: http
-    server: 37.32.21.237
-    port: "3128"
-  - name: melli 12 (IRAN)
-    type: http
-    server: 94.101.178.46
-    port: "8080"
+  - {name: "s1", server: 37.32.14.134, port: 443, type: socks5}
+  - {name: "s2", server: 37.32.15.164, port: 443, type: socks5}
+  - {name: "s3", server: 37.32.26.253, port: 8080, type: http}
+  - {name: "s4", server: 37.32.20.80, port: 443, type: socks5}
+  - {name: "s5", server: 37.32.28.39, port: 80, type: http}
+  - {name: "s6", server: 37.32.13.26, port: 8888, type: http}
+  - {name: "s7", server: 37.32.13.170, port: 80, type: http}
 proxy-groups:
   - name: MENU
     type: select
     proxies:
       - AUTOMATIC
       - MANUAL
-      - melli (IRAN)
   - name: MANUAL
     type: select
     proxies:
-      - melli 1 (Netherlands)
-      - melli 2 (Netherlands)
-      - melli 3 (Finland)
-      - melli 4 (Germany)
-      - melli 5 (Netherlands)
-      - melli 6 (Netherlands)
+      - s1
+      - s2
+      - s3
+      - s4
+      - s5
+      - s6
+      - s7
   - name: AUTOMATIC
     type: url-test
     url: http://connectivitycheck.gstatic.com/generate_204
     interval: 300
     proxies:
-      - melli 1 (Netherlands)
-      - melli 2 (Netherlands)
-      - melli 3 (Finland)
-      - melli 4 (Germany)
-      - melli 5 (Netherlands)
-      - melli 6 (Netherlands)
-  - name: melli (IRAN)
-    proxies:
-      - melii 7 (IRAN)
-      - melli 8 (IRAN)
-      - melli 9 (IRAN)
-      - melli 10 (IRAN)
-      - melli 11 (IRAN)
-      - melli 12 (IRAN)
-    type: select
+      - s1
+      - s2
+      - s3
+      - s4
+      - s5
+      - s6
+      - s7
 rules:
   - DOMAIN-SUFFIX,ir,DIRECT
   - GEOIP,IR,DIRECT
@@ -120,3 +70,4 @@ rules:
   - IP-CIDR,1.1.1.1/32,MENU
   - IP-CIDR,1.0.0.1/32,MENU
   - DOMAIN-SUFFIX,local,DIRECT
+  
